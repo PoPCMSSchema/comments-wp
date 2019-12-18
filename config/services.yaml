@@ -1,0 +1,4 @@
+services:
+    comment_type_api:
+        class: \PoP\CommentsWP\TypeAPIs\CommentTypeAPI
+        public: true
