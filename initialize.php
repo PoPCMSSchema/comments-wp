@@ -1,2 +1,2 @@
 <?php
-\PoP\CommentsWP\Component::init();
+//\PoP\CommentsWP\Component::initialize();
