@@ -20,12 +20,13 @@ Via Composer
 composer require getpop/comments-wp
 ```
 
-<!--
 ## Usage
 
+Initialize the component:
+
 ``` php
+\PoP\CommentsWP\Component::initialize();
 ```
--->
 
 ## Standards
 
