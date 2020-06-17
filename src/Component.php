@@ -19,7 +19,7 @@ class Component extends AbstractComponent
     {
         return [
             \PoP\Comments\Component::class,
-            \PoP\PostsWP\Component::class,
+            \PoP\CustomPostsWP\Component::class,
         ];
     }
 
