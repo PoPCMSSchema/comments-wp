@@ -26,7 +26,7 @@ class Component extends AbstractComponent
     public static function getDependedMigrationPlugins(): array
     {
         return [
-            'migrate-comments-wp',
+            'pop-schema/migrate-comments-wp',
         ];
     }
 
