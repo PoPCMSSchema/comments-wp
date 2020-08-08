@@ -1,5 +1,5 @@
 {
-    "name": "getpop/comments-wp",
+    "name": "pop-schema/comments-wp",
     "type": "library",
     "description": "Implementation for WordPress of contracts from package \"Comments\"",
     "keywords": [
@@ -19,9 +19,9 @@
     "prefer-stable": true,
     "require": {
         "php": "~7.2",
-        "getpop/comments": "dev-master",
-        "getpop/customposts-wp": "dev-master",
-        "getpop/migrate-comments-wp": "dev-master"
+        "pop-schema/comments": "dev-master",
+        "pop-schema/customposts-wp": "dev-master",
+        "pop-schema/migrate-comments-wp": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": ">=8.5",
@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "PoP\\CommentsWP\\": "src"
+            "PoPSchema\\CommentsWP\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PoP\\CommentsWP\\": "tests"
+            "PoPSchema\\CommentsWP\\": "tests"
         }
     },
     "scripts": {

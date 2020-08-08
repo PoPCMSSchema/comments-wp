@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PoP\CommentsWP;
+namespace PoPSchema\CommentsWP;
 
 use PoP\Root\Component\AbstractComponent;
 use PoP\Root\Component\YAMLServicesTrait;
@@ -18,8 +18,8 @@ class Component extends AbstractComponent
     public static function getDependedComponentClasses(): array
     {
         return [
-            \PoP\Comments\Component::class,
-            \PoP\CustomPostsWP\Component::class,
+            \PoPSchema\Comments\Component::class,
+            \PoPSchema\CustomPostsWP\Component::class,
         ];
     }
 

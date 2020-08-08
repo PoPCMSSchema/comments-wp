@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PoP\CommentsWP\TypeAPIs;
+namespace PoPSchema\CommentsWP\TypeAPIs;
 
 use WP_Comment;
-use PoP\Comments\TypeAPIs\CommentTypeAPIInterface;
+use PoPSchema\Comments\TypeAPIs\CommentTypeAPIInterface;
 /**
  * Methods to interact with the Type, to be implemented by the underlying CMS
  */

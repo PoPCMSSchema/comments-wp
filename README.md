@@ -17,7 +17,7 @@ Implementation for WordPress of contracts from package "Comments"
 Via Composer
 
 ``` bash
-composer require getpop/comments-wp
+composer require pop-schema/comments-wp
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ Initialize the component:
 
 ``` php
 \PoP\Root\ComponentLoader::initializeComponents([
-    \PoP\CommentsWP\Component::class,
+    \PoPSchema\CommentsWP\Component::class,
 ]);
 ```
 
@@ -61,17 +61,17 @@ If you discover any security related issues, please email leo@getpop.org instead
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/getpop/comments-wp.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/pop-schema/comments-wp.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/getpop/comments-wp/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/getpop/comments-wp.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/getpop/comments-wp.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/getpop/comments-wp.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/pop-schema/comments-wp/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/pop-schema/comments-wp.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/pop-schema/comments-wp.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/pop-schema/comments-wp.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/getpop/comments-wp
-[link-travis]: https://travis-ci.org/getpop/comments-wp
-[link-scrutinizer]: https://scrutinizer-ci.com/g/getpop/comments-wp/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/getpop/comments-wp
-[link-downloads]: https://packagist.org/packages/getpop/comments-wp
+[link-packagist]: https://packagist.org/packages/pop-schema/comments-wp
+[link-travis]: https://travis-ci.org/pop-schema/comments-wp
+[link-scrutinizer]: https://scrutinizer-ci.com/g/pop-schema/comments-wp/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/pop-schema/comments-wp
+[link-downloads]: https://packagist.org/packages/pop-schema/comments-wp
 [link-author]: https://github.com/leoloso
 [link-contributors]: ../../contributors

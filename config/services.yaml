@@ -1,4 +1,4 @@
 services:
     comment_type_api:
-        class: \PoP\CommentsWP\TypeAPIs\CommentTypeAPI
+        class: \PoPSchema\CommentsWP\TypeAPIs\CommentTypeAPI
         public: true
