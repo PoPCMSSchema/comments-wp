@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PoPSchema\CommentsWP\LooseContracts;
 
+use PoP\Root\App;
 use PoP\LooseContracts\AbstractLooseContractResolutionSet;
 
 class LooseContractResolutionSet extends AbstractLooseContractResolutionSet
@@ -11,14 +12,14 @@ class LooseContractResolutionSet extends AbstractLooseContractResolutionSet
     protected function resolveContracts(): void
     {
         // Actions
-        $this->getHooksAPI()->addAction('wp_insert_comment', function ($comment_id, $comment): void {
-            $this->getHooksAPI()->doAction('popcms:insertComment', $comment_id, $comment);
+        App::addAction('wp_insert_comment', function ($comment_id, $comment): void {
+            App::doAction('popcms:insertComment', $comment_id, $comment);
         }, 10, 2);
-        $this->getHooksAPI()->addAction('spam_comment', function ($comment_id, $comment): void {
-            $this->getHooksAPI()->doAction('popcms:spamComment', $comment_id, $comment);
+        App::addAction('spam_comment', function ($comment_id, $comment): void {
+            App::doAction('popcms:spamComment', $comment_id, $comment);
         }, 10, 2);
-        $this->getHooksAPI()->addAction('delete_comment', function ($comment_id, $comment): void {
-            $this->getHooksAPI()->doAction('popcms:deleteComment', $comment_id, $comment);
+        App::addAction('delete_comment', function ($comment_id, $comment): void {
+            App::doAction('popcms:deleteComment', $comment_id, $comment);
         }, 10, 2);
 
         $this->getLooseContractManager()->implementHooks([
