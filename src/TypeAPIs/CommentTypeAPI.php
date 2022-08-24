@@ -38,12 +38,22 @@ class CommentTypeAPI implements CommentTypeAPIInterface
         return $object instanceof WP_Comment;
     }
 
+    /**
+     * @return array<string|int>|object[]
+     * @param array<string,mixed> $query
+     * @param array<string,mixed> $options
+     */
     public function getComments(array $query, array $options = []): array
     {
         $query = $this->convertCommentsQuery($query, $options);
         return (array) get_comments($query);
     }
 
+    /**
+     * @return array<string,mixed>
+     * @param array<string,mixed> $query
+     * @param array<string,mixed> $options
+     */
     protected function convertCommentsQuery(array $query, array $options): array
     {
         if (($options[QueryOptions::RETURN_TYPE] ?? null) === ReturnTypes::IDS) {
@@ -144,6 +154,10 @@ class CommentTypeAPI implements CommentTypeAPIInterface
         return $query;
     }
 
+    /**
+     * @param array<string,mixed> $query
+     * @param array<string,mixed> $options
+     */
     public function getCommentCount(array $query, array $options = []): int
     {
         $query = $this->convertCommentsQuery($query, $options);
@@ -202,7 +216,7 @@ class CommentTypeAPI implements CommentTypeAPIInterface
         // Do not allow HTML tags
         return strip_tags($comment->comment_content);
     }
-    public function getCommentPostId(object $comment): string|int
+    public function getCommentPostID(object $comment): string|int
     {
         /** @var WP_Comment */
         $comment = $comment;
@@ -248,7 +262,7 @@ class CommentTypeAPI implements CommentTypeAPIInterface
         /** @var WP_Comment $comment*/
         return $gmt ? $comment->comment_date_gmt : $comment->comment_date;
     }
-    public function getCommentId(object $comment): string|int
+    public function getCommentID(object $comment): string|int
     {
         /** @var WP_Comment */
         $comment = $comment;
