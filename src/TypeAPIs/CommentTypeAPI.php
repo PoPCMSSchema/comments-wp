@@ -11,7 +11,6 @@ use PoPCMSSchema\Comments\Constants\CommentStatus;
 use PoPCMSSchema\Comments\Constants\CommentTypes;
 use PoPCMSSchema\Comments\TypeAPIs\CommentTypeAPIInterface;
 use PoPCMSSchema\SchemaCommons\DataLoading\ReturnTypes;
-use PoPCMSSchema\SchemaCommonsWP\StaticHelpers\DataAccessHelpers;
 use PoPSchema\SchemaCommons\Constants\QueryOptions;
 use WP_Comment;
 use WP_Post;
@@ -300,7 +299,8 @@ class CommentTypeAPI extends AbstractBasicService implements CommentTypeAPIInter
     public function getCommentDate(object $comment, bool $gmt = false): string
     {
         /** @var WP_Comment $comment*/
-        return DataAccessHelpers::getCommentDate($comment, $gmt);
+        // If the GMT date is stored as "0000-00-00 00:00:00", then use the non-GMT date
+        return $gmt && ($comment->comment_date_gmt !== "0000-00-00 00:00:00") ? $comment->comment_date_gmt : $comment->comment_date;
     }
     public function getCommentID(object $comment): string|int
     {
